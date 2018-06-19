@@ -1,0 +1,21 @@
+.search-box {
+  display: inline-block;
+  width: calc(100vw - 72%);
+  position: relative;
+  top: -4px;
+}
+.search-box .input-group * {
+  font-size: 12px;
+  height: 25px;
+  border: 1px solid #fff;
+  background: #e9ebee;
+  outline: 0;
+}
+.search-box .input-group button {
+  color: #7a7a7a;
+  -webkit-transition: all ease 150ms;
+  transition: all ease 150ms;
+}
+.search-box .input-group button:hover {
+  color: #000;
+}

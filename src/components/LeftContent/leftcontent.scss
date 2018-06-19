@@ -1,0 +1,49 @@
+.left-content {
+  left: 0;
+}
+.left-content {
+  position: fixed;
+  top: 42px;
+  bottom: 0;
+  width: 250px;
+  background: #e9ebee;
+  overflow: auto;
+}
+.left-content .global-links {
+  padding: 10px;
+  margin-left: 10px;
+}
+.left-content .global-links a {
+  display: inline-block;
+  color: #000;
+  font-size: 12px;
+  width: 100%;
+  padding: 2px 8px;
+}
+.left-content .global-links a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+.left-content .global-links .counter {
+  float: right;
+  color: #90949c;
+}
+.left-content .global-links .counter .fa-ellipsis-h {
+  font-size: 20px;
+}
+.left-content .global-links .activepage {
+  padding-top: 5px;
+  background: #fff;
+  border-radius: 2px;
+  border: 1px solid #dddfe2;
+}
+.left-content .group-content h4 {
+  margin: 20px 0 8px 0;
+  font-size: 13px;
+  color: #444;
+  text-transform: uppercase;
+}
+.left-content a:last-child .fa-caret-down {
+  margin-right: 12px;
+}

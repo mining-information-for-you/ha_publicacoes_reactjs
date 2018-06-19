@@ -1,0 +1,49 @@
+.right-group {
+  float: right;
+}
+.right-group .link-group {
+  position: relative;
+  top: -4px;
+  display: inline-block;
+  padding: 0;
+}
+.right-group .link-group a {
+  padding: 9px 8px;
+  color: #3b5e95;
+  font-size: 12px;
+}
+.right-group .link-group a img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 9px;
+}
+.right-group .link-group a:hover {
+  background: #FFF;
+  text-decoration: none;
+}
+.right-group .link-group:nth-child(2) a {
+  margin-right: 16px;
+  border-left: 1px solid #355485;
+}
+.right-group .notification-group {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+.right-group .notification-group .link-group a {
+  margin: 0;
+  border: 0;
+}
+.right-group .notification-group a {
+  color: #17253c;
+  font-size: 21px;
+}
+.right-group .notification-group a:hover {
+  color: #111;
+  background: transparent;
+}
+.right-group .link-group:nth-child(4) a {
+  margin-left: 16px;
+  border-left: 1px solid #355485;
+}
