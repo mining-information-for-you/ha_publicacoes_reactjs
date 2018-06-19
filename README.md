@@ -1,14 +1,14 @@
-#Projeto Publicações HA
+# Projeto Publicações HA
 
 
-#Instalações para executar
+# Instalações para executar
 
-minimo
-node v10.1.0
-npm 5.6.0
+  minimo
+  node v10.1.0
+  npm 5.6.0
 
 
-#Executar
+# Executar
     Entrar na pasta raiz.
     npm install - para instalar todas as dependencias
     npm start - para subir o servidor
