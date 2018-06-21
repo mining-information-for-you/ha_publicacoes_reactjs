@@ -9,7 +9,7 @@
 }
 .right-group .link-group a {
   padding: 9px 8px;
-  color: #3b5e95;
+  color: #fff;
   font-size: 12px;
 }
 .right-group .link-group a img {
@@ -19,7 +19,7 @@
   margin-right: 9px;
 }
 .right-group .link-group a:hover {
-  background: #FFF;
+  
   text-decoration: none;
 }
 .right-group .link-group:nth-child(2) a {
@@ -29,18 +29,19 @@
 .right-group .notification-group {
   display: inline-block;
   position: relative;
-  top: 3px;
 }
+
+
 .right-group .notification-group .link-group a {
   margin: 0;
   border: 0;
 }
 .right-group .notification-group a {
-  color: #17253c;
+  color: #2F4F4F;
   font-size: 21px;
 }
 .right-group .notification-group a:hover {
-  color: #111;
+  color: #008B8B;
   background: transparent;
 }
 .right-group .link-group:nth-child(4) a {

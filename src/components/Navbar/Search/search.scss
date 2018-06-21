@@ -6,15 +6,16 @@
 }
 .search-box .input-group * {
   font-size: 12px;
-  height: 25px;
+  
   border: 1px solid #fff;
-  background: #e9ebee;
+  background: #fff;
   outline: 0;
 }
 .search-box .input-group button {
-  color: #7a7a7a;
+
+  color: #000;
   -webkit-transition: all ease 150ms;
-  transition: all ease 150ms;
+  transition: all ease 150ms
 }
 .search-box .input-group button:hover {
   color: #000;

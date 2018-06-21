@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './rightgroup.scss'
-
+import FaComment from 'react-icons/lib/fa/comment'
+import FaGlobe from 'react-icons/lib/fa/globe'
 
 
 
@@ -12,23 +13,24 @@ class RightGroup extends Component {
           <div class="right-group">
           <div className="link-group">
               <a href="">
-                <img src="//i.imgur.com/5jInimY.jpg"/>Michael
+                <img src="https://avatars1.githubusercontent.com/u/108081?s=400&v=4"/>Rodrigo
               </a>
           </div>
 
           <div className="link-group">
-            <a href="">Home</a>
+            <a href="">Inicio</a>
           </div>
 
           <div className="notification-group">
-            <div className="link-group">
-              <a className="freqnotif" href="">
-                  <i className="fa fa-group"></i>
-              </a>
-            </div>
+
           <div className="link-group">
               <a className="msgnotif" href="">
-              <i className="fa fa-comment"></i>
+              <i className="fa fa-comment"><FaComment size={"30"}/></i>
+              </a>
+          </div>
+          <div className="link-group">
+              <a className="msgnotif" href="">
+              <i className="fa fa-comment"><FaGlobe size={"30"}/></i>
               </a>
           </div>
           </div>
