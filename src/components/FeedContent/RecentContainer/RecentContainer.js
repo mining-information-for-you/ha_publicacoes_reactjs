@@ -20,9 +20,11 @@ class RecentContainer extends Component {
             }),
             mode: 'no-cors'
           }
+        console.log(resquetInfo);
 
         fetch('http://127.0.0.1:8085/api/Autor', resquetInfo)
               .then(response => {
+                console.log(response);
                 if (response.ok){
                   console.log('okk');
                    return response.text();
