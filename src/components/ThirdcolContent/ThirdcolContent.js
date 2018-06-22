@@ -37,7 +37,7 @@ class ThirdcolContent extends Component {
                   <i className="fa fa-globe"></i>
                   Notifications <span>1</span>
                 </a>
-                <hr></hr>
+                
               </p>
               <p>
                 <a href="">

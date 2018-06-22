@@ -10,10 +10,10 @@ class RightGroup extends Component {
       render(){
 
         return(
-          <div class="right-group">
+          <div className="right-group">
           <div className="link-group">
               <a href="">
-                <img src="https://avatars1.githubusercontent.com/u/108081?s=400&v=4"/>Rodrigo
+                <img src="https://avatars1.githubusercontent.com/u/108081?s=400&v=4"/>Rodrigo Faccioli
               </a>
           </div>
 

@@ -1,0 +1,94 @@
+.newpostheader,
+ {
+  padding: 4px 5px;
+  background: #f6f7f9;
+}
+
+.newpostheader li{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+
+.newpostheader li:first-child{
+
+ float: left;
+}
+
+.newpostheader li:last-child
+ {
+  float: rght;
+}
+
+.newpostheader h4,
+ {
+  font-size: 14px;
+  margin: 10px 5px;
+  color: #666;
+}
+.newpostheader a:first-child
+ {
+  margin-right: 5px;
+}
+
+.newpostheader a {
+  font-size: 14px;
+}
+
+.newpostheader a img {
+  width: 40px;
+  height: 40px;
+  margin: 5px 5px 0 5px;
+}
+.newpostheader a .name {
+  position: relative;
+  top: -6px;
+}
+
+.newpostheader a .fa
+ {
+  display: inline-block;
+  margin: 5px;
+}
+.newpostheader > span {
+  position: relative;
+  top: -6px;
+  left: -4px;
+  font-size: 14px;
+}
+
+.newpostheader p{
+  position: relative;
+  top: -22px;
+  left: 55px;
+  font-size: 12px;
+}
+
+.newpostheader p a
+ {
+  font-size: 12px;
+  color: #4b4f56;
+  margin-right: 5px;
+}
+.newpostheader .rightsideofpost
+ {
+  position: relative;
+  top: -73px;
+  float: right;
+}
+.newpostheader .rightsideofpost .personpostmenu
+ {
+  color: #4b4f56;
+}
+.newpostheader li a
+ {
+  font-size: 14px;
+  color: #4b4f56;
+  margin-right: 5px;
+}
+.newpostheader li a .fa
+{
+  display: inline-block;
+  margin: 5px;
+}

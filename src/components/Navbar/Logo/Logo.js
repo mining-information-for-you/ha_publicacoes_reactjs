@@ -6,13 +6,13 @@ import './logo.scss'
 class Logo extends Component {
 
       render(){
-        const logo = require('./../../image/logo.png');
+        const logo = require('./../../../image/logo.png');
         return(
 
           <a className="logo" href="   ">
               <img alt="" src={String(logo)} style={{width: 50}}  />
           </a>
-      
+
         )
       }
 }
