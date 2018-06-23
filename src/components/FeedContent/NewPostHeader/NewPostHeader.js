@@ -13,7 +13,8 @@ class NewPostHeader extends Component {
                       <img src="https://i1.rgstatic.net/ii/profile.image/274606363770880-1442482667796_Q512/Carlos_Paiva3.jpg" />
                       <span className="name">Carlos Paiva</span>
                 </a>
-                <p>
+                <div>
+
                   <a className="date" href="">44 mins</a>
                   <a href="">
                       <i className="fa fa-globe"></i>
@@ -26,7 +27,8 @@ class NewPostHeader extends Component {
                       <i className="fa fa-caret-down"></i>
                     </a>
                   </div>
-               </p>
+               
+               </div>
          </div>
 
         )

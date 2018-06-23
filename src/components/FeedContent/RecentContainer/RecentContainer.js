@@ -10,29 +10,28 @@ class RecentContainer extends Component {
 
 
 
-      componentDidMount(){
-        const resquetInfo = {
-            method:'POST',
-            body:JSON.stringify({"authorname": "Carlos Paiva"}),
-            headers: new Headers({
-                'Content-type':'application/json',
-                'Access-Control-Allow-Origin': '*',
-            }),
-            mode: 'no-cors'
-          }
-        console.log(resquetInfo);
 
-        fetch('http://127.0.0.1:8085/api/Autor', resquetInfo)
-              .then(response => {
-                console.log(response);
-                if (response.ok){
-                  console.log('okk');
-                   return response.text();
-                }else{
-                  console.log('Error');
-                }
-              })
-      }
+      componentDidMount(){
+
+        var data = {"authorname": 'Carlos%'};
+        var url  = 'http://127.0.0.1:8085/api/Autor';
+
+        console.log(data);
+        fetch(url, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers:{
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+          },
+          mode: 'no-cors'
+        })
+        .then(response => response)
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
+
+
+    }
 
 
       render(){
