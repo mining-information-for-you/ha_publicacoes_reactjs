@@ -28,7 +28,7 @@ class Search extends Component {
             authorname: resultado.result['authorname']
         }
 
-        
+
         var postData = {
             pesquisa
         }
@@ -40,14 +40,27 @@ class Search extends Component {
       render(){
 
         return(
+
+
           <div className="search-box">
-            <div className="input-group">
-                <input aria-describedby="basic-addon2" className="form-control" name="authorname" onChange={this.campoPesquisa} placeholder="Busca" type="text" />
-                <button className="input-group-addon pointer" onClick={this.pesquisar} id="basic-addon2">
-                    <i className="fa fa-search"><FaSearch size={"20"}/></i>
-                </button>
-             </div>
+            <div className="input-group mb-3">
+          <div className="input-group-prepend">
+            <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtro</button>
+            <div className="dropdown-menu">
+              <a className="dropdown-item" href="#">Autor</a>
+              <a className="dropdown-item" href="#">Ano</a>
+              <a className="dropdown-item" href="#">Produção</a>
+            </div>
           </div>
+          <input aria-describedby="basic-addon2" className="form-control" name="authorname" onChange={this.campoPesquisa} placeholder="Busca" type="text" />
+            <button className="input-group-addon pointer" onClick={this.pesquisar} id="basic-addon2">
+                <i className="fa fa-search"><FaSearch size={"20"}/></i>
+          </button>
+        </div>
+
+  </div>
+
+
         )
       }
 }

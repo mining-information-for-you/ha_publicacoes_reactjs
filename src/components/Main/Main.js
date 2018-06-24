@@ -14,10 +14,14 @@ class Main extends Component {
           <div>
 
 
-          <Navbar></Navbar>
-          <LeftContent></LeftContent>
-          <FeedContent></FeedContent>
-          <ThirdcolContent></ThirdcolContent>
+            <Navbar/>
+
+            <LeftContent/>
+
+            <FeedContent/>
+
+            <ThirdcolContent/>
+
           </div>
         )
       }
