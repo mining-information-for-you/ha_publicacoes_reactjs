@@ -34,7 +34,9 @@ class RecentContainer extends Component {
                      return (
                               <li className="list-group-item"  key={indice}>
 
-                             <h1> {item.producao} </h1>
+                                <NewPostHeader autor={item.autor}></NewPostHeader>
+                                <NewPost producao={item.producao}></NewPost>
+                                
 
 
                               </li>
