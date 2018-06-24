@@ -26,17 +26,17 @@ class RecentContainer extends Component {
         //console.log(results);
         if (results) {
              return (
-               <div>
+               <div  className="recentcontainer">
 
-               <ul className="list-group">
+               <ul className="none">
                {
                    results.map((item, indice) => {
                      return (
-                              <li className="list-group-item"  key={indice}>
+                              <li className="lista" key={indice}>
 
-                                <NewPostHeader autor={item.autor}></NewPostHeader>
+                                <NewPostHeader autor={item.autor} ano={item.ano} revista={item.revista}></NewPostHeader>
                                 <NewPost producao={item.producao}></NewPost>
-                                
+
 
 
                               </li>
@@ -54,8 +54,7 @@ class RecentContainer extends Component {
         }else{
           return (
               <div>
-                <NewPostHeader></NewPostHeader>
-                <NewPost></NewPost>
+                
               </div>
           );
         }

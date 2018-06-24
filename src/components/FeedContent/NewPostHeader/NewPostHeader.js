@@ -18,20 +18,12 @@ class NewPostHeader extends Component {
                       <span className="name">{this.props.autor}</span>
                 </a>
                 <div>
-                <p>
-                  <a className="date" href="">44 mins</a>
-                  <a href="">
-                      <i className="fa fa-globe"></i>
-                  </a>
-                  <div className="rightsideofpost">
-                    <a className="follow" href="">
-                      <i className="fa fa-star"></i>
-                    </a>
-                    <a className="personpostmenu" href="">
-                      <i className="fa fa-caret-down"></i>
-                    </a>
-                  </div>
-</p>
+                  <p>
+                  <a className="date" href="">{this.props.ano}</a>
+                  Revista: {this.props.revista}
+
+
+                  </p>
                </div>
          </div>
 
