@@ -11,7 +11,7 @@ class LeftContent extends Component {
           <div className="left-content">
           <div className="global-links">
               <a href="javascript:void(0)">
-                <img src="https://avatars1.githubusercontent.com/u/108081?s=400&v=4" /> First Last
+                <img src="https://avatars1.githubusercontent.com/u/108081?s=400&v=4" /> Rodrigo Faccioli
                 <span className="counter">1</span>
               </a>
 

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import './search.scss'
 import FaSearch from 'react-icons/lib/md/search'
 import { connect } from 'react-redux'
+import SearchAction from './../../../actions/SearchAction'
+
 import { thunkSearchAction } from './../../../actions/SearchAction'
 
 
@@ -11,10 +13,27 @@ class Search extends Component {
         super(props)
 
         this.pesquisar = this.pesquisar.bind(this)
+        this.campoPesquisa = this.campoPesquisa.bind(this)
+      }
+
+      campoPesquisa = event => {
+        this.props.onCampoPesquisa({ authorname: event.target.value })
       }
 
       pesquisar = event => {
-        console.log('pesquisando');
+        event.preventDefault();
+        const { resultado } = this.props
+
+        const pesquisa = {
+            authorname: resultado.result['authorname']
+        }
+
+        
+        var postData = {
+            pesquisa
+        }
+
+        this.props.onPesquisar(postData);
       }
 
 
@@ -23,7 +42,7 @@ class Search extends Component {
         return(
           <div className="search-box">
             <div className="input-group">
-                <input aria-describedby="basic-addon2" className="form-control" placeholder="Busca" type="text" />
+                <input aria-describedby="basic-addon2" className="form-control" name="authorname" onChange={this.campoPesquisa} placeholder="Busca" type="text" />
                 <button className="input-group-addon pointer" onClick={this.pesquisar} id="basic-addon2">
                     <i className="fa fa-search"><FaSearch size={"20"}/></i>
                 </button>
@@ -42,7 +61,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchtoProps = (dispath) => {
     return {
-        onHandleSubmit: (resultado) => dispath(thunkSearchAction(resultado))
+        onCampoPesquisa: (resultado) => dispath(SearchAction.onCampoPesquisa(resultado)),
+        onPesquisar: (resultado) => dispath(thunkSearchAction(resultado)),
+
     }
 }
 

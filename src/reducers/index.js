@@ -6,7 +6,6 @@ import { error, loading, success } from './SearchReducer'
 
 export default combineReducers({
 
-
       result: SearchReducer,
       error,
       loading,

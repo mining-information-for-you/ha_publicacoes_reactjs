@@ -40,10 +40,10 @@ export function success(state = [], action){
   }
 }
 
-export default (state = initialState , action) => {
+export default (state = [] , action) => {
 
   switch (action.type) {
-  case 'ON_HANDLECHANGE':
+  case 'ON_CAMPOPESQUISA':
 
        const valuee = action.payload.value
        //console.log("entrou reducer");

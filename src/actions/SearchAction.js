@@ -37,12 +37,13 @@ function error(error){
 
 export function thunkSearchAction(resultado){
 
-
+    //console.log('action');
+    //console.log(resultado);
     return (dispatch) => {
       dispatch(isLoading(true))
        fetch(`${URL_API}Autor`, {
             method: 'POST',
-            body: JSON.stringify({"authorname":"Carlos Paiva"}),
+            body: JSON.stringify(resultado.pesquisa),
             headers:{
               'Access-Control-Allow-Origin': '*',
               'Content-Type': 'application/json'
@@ -65,4 +66,17 @@ export function thunkSearchAction(resultado){
 
 
     }
+}
+
+const onCampoPesquisa = (value) => {
+  return {
+    type:  'ON_CAMPOPESQUISA',
+    payload: {
+      value
+    }
+  }
+}
+
+export default {
+  onCampoPesquisa,
 }

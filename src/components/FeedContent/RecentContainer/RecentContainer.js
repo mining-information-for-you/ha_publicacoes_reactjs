@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './recentcontainer.scss'
 import NewPostHeader from './../NewPostHeader/NewPostHeader'
 import NewPost from './../NewPost/NewPost'
+import { connect } from 'react-redux'
 
 
 
@@ -10,42 +11,63 @@ class RecentContainer extends Component {
 
 
 
+      constructor(props){
+        super(props)
+        const results = []
+      }
 
-      componentDidMount(){
-
-        var data = {"authorname": 'Carlos%'};
-        var url  = 'http://127.0.0.1:8085/api/Autor';
-
-        console.log(data);
-        fetch(url, {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers:{
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
-          },
-          mode: 'no-cors'
-        })
-        .then(response => response)
-        .catch(error => console.error('Error:', error))
-        .then(response => console.log('Success:', response));
-
-
-    }
 
 
       render(){
+        const { resultado } = this.props
+        const { lista } = this.props
+        const results = this.props.lista.result
 
-        return(
-            <div className="recentcontainer">
-              <NewPostHeader/>
-              <NewPost/>
+        //console.log(results);
+        if (results) {
+             return (
+               <div>
 
-            </div>
+               <ul className="list-group">
+               {
+                   results.map((item, indice) => {
+                     return (
+                              <li className="list-group-item"  key={indice}>
 
-        )
-      }
+                             <h1> {item.producao} </h1>
+
+
+                              </li>
+                           )
+                         })
+               }
+
+
+              </ul>
+
+                          </div>
+             );
+
+
+        }else{
+          return (
+              <div>
+                <NewPostHeader></NewPostHeader>
+                <NewPost></NewPost>
+              </div>
+          );
+        }
+
+     }
+}
+
+const mapStateToProps = (state) => {
+    return {
+         resultado: state.result,
+         lista: state.success
+
+    }
 }
 
 
-export default RecentContainer;
+export default connect(mapStateToProps)(RecentContainer) ;
