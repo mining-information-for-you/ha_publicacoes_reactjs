@@ -39,11 +39,12 @@ export function thunkSearchAction(resultado){
 
     //console.log('action');
     //console.log(resultado);
+    //console.log(resultado.pesquisa.api);
     return (dispatch) => {
       dispatch(isLoading(true))
-       fetch(`${URL_API}Autor`, {
+       fetch(`${URL_API}${resultado.pesquisa.api}`, {
             method: 'POST',
-            body: JSON.stringify(resultado.pesquisa),
+            body: JSON.stringify(resultado.pesquisa.buscar),
             headers:{
               'Access-Control-Allow-Origin': '*',
               'Content-Type': 'application/json'

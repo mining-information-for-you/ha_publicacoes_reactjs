@@ -12,6 +12,11 @@ class Search extends Component {
       constructor(props){
         super(props)
 
+        this.state = {
+          filtro: "Filtro",
+          api: ""
+        }
+
         this.pesquisar = this.pesquisar.bind(this)
         this.campoPesquisa = this.campoPesquisa.bind(this)
       }
@@ -24,32 +29,66 @@ class Search extends Component {
         event.preventDefault();
         const { resultado } = this.props
 
-        const pesquisa = {
-            authorname: resultado.result['authorname']
-        }
+        //console.log(this.state);
+        if (this.state.api == 'Autor')
+            var pesquisa = {
+                api : this.state.api,
+                buscar: { authorname: resultado.result['authorname'] }
+              }
+
+        if (this.state.api == 'AnoHaPublicoes')
+            var pesquisa = {
+                api : this.state.api,
+                buscar: { ano: resultado.result['authorname'] }
+            }
+
+        if (this.state.api == 'Producao')
+                var pesquisa = {
+                    api : this.state.api,
+                    buscar: { producao: resultado.result['authorname'] }
+                }
 
 
         var postData = {
             pesquisa
         }
 
-        this.props.onPesquisar(postData);
+        if (!this.state.api == "")
+            this.props.onPesquisar(postData);
       }
 
+      setAutor = event => {
+        event.preventDefault();
+        this.setState({ filtro: 'Autor'});
+        this.setState({ api: 'Autor'});
+
+      }
+
+      setAno = event => {
+        event.preventDefault();
+        this.setState({ filtro: 'Ano'});
+        this.setState({ api: 'AnoHaPublicoes'});
+      }
+
+      setProducao = event => {
+        event.preventDefault();
+        this.setState({ filtro: 'Produção'});
+        this.setState({ api: 'Producao'});
+      }
 
       render(){
-
+        //console.log(this.state);
         return(
 
 
           <div className="search-box">
             <div className="input-group mb-3">
           <div className="input-group-prepend">
-            <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtro</button>
+            <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{this.state.filtro}</button>
             <div className="dropdown-menu">
-              <a className="dropdown-item" href="#">Autor</a>
-              <a className="dropdown-item" href="#">Ano</a>
-              <a className="dropdown-item" href="#">Produção</a>
+              <a className="dropdown-item" onClick={this.setAutor} href=''>Autor</a>
+              <a className="dropdown-item" onClick={this.setAno} href=''>Ano</a>
+              <a className="dropdown-item" onClick={this.setProducao} href=''>Produção</a>
             </div>
           </div>
           <input aria-describedby="basic-addon2" className="form-control" name="authorname" onChange={this.campoPesquisa} placeholder="Busca" type="text" />
