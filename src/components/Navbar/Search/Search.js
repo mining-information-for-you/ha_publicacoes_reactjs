@@ -76,6 +76,13 @@ class Search extends Component {
         this.setState({ api: 'Producao'});
       }
 
+      setMeSH = event => {
+        event.preventDefault();
+        this.setState({ filtro: 'MeSH'});
+        this.setState({ api: 'MeshDescriptor'});
+      }
+
+
       render(){
         //console.log(this.state);
         return(
@@ -89,6 +96,7 @@ class Search extends Component {
               <a className="dropdown-item" onClick={this.setAutor} href=''>Autor</a>
               <a className="dropdown-item" onClick={this.setAno} href=''>Ano</a>
               <a className="dropdown-item" onClick={this.setProducao} href=''>Produção</a>
+              <a className="dropdown-item" onClick={this.setMeSH} href=''>MeSH</a>
             </div>
           </div>
           <input aria-describedby="basic-addon2" className="form-control" name="authorname" onChange={this.campoPesquisa} placeholder="Busca" type="text" />
