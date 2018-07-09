@@ -22,7 +22,8 @@ class Search extends Component {
       }
 
       campoPesquisa = event => {
-        this.props.onCampoPesquisa({ authorname: event.target.value })
+        this.props.onCampoPesquisa({ authorname: event.target.value, 
+                                     api: this.state.api })
       }
 
       pesquisar = event => {
@@ -47,7 +48,12 @@ class Search extends Component {
                     api : this.state.api,
                     buscar: { producao: resultado.result['authorname'] }
                 }
-
+        
+        if (this.state.api == 'MeshDescriptor')
+                var pesquisa = {
+                    api : this.state.api,
+                    buscar: { mesh_term: resultado.result['authorname'] }
+                }
 
         var postData = {
             pesquisa

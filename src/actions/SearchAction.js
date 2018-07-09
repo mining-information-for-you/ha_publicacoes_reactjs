@@ -1,4 +1,4 @@
-import { URL_API } from "./../services/base";
+import { URL_API, URL_API_M } from "./../services/base";
 
 
 const IS_LOADING = 'IS_LOADING'
@@ -40,9 +40,15 @@ export function thunkSearchAction(resultado){
     //console.log('action');
     //console.log(resultado);
     //console.log(resultado.pesquisa.api);
+    var url = '';
+    if (resultado.pesquisa.api == 'MeshDescriptor'){
+        url = `${URL_API_M}${resultado.pesquisa.api}`;
+    }else{
+        url = `${URL_API}${resultado.pesquisa.api}`;
+    }
     return (dispatch) => {
       dispatch(isLoading(true))
-       fetch(`${URL_API}${resultado.pesquisa.api}`, {
+       fetch(url, {
             method: 'POST',
             body: JSON.stringify(resultado.pesquisa.buscar),
             headers:{
