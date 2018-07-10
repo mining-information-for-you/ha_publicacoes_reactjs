@@ -18,16 +18,23 @@ class LeftContent extends Component {
              
               <div className="group-content">
                 <h4>Grupos</h4>
-                <a href="" class="dropdown-toggle" data-toggle="dropdown" >
-                     <ul class="dropdown-menu">
-                        <li><a href="#">Citacao 01 <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Citacao 02 <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
-                        <li class="divider"></li>
-                     </ul>
-                  <img src="http://theieltscoach.com/wp-content/uploads/2015/03/IELTS-Speaking-Tips-Icon-2.png" /> HA Barretos
-                  
-                </a>
+                <div>
+                  <a href="" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                      <img src="http://theieltscoach.com/wp-content/uploads/2015/03/IELTS-Speaking-Tips-Icon-2.png" /> HA Barretos 
+                  </a>
+                  <div class="dropdown-menu">
+                    <span class="dropdown-item-text">Department of Physical Therapy, Barretos Cancer Hospital, Barretos, Sao Paulo</span>
+                    <div class="dropdown-divider"></div>
+                    <span class="dropdown-item-text">Barretos Children´s Cancer Hospital</span>
+                    <div class="dropdown-divider"></div>
+                    <span class="dropdown-item-text">Stem Cell Transplantation Center / Barretos Cancer Hospital</span>
+                    <div class="dropdown-divider"></div>
+                    <span class="dropdown-item-text">Barretos Cancer Hospital</span>
+                    <div class="dropdown-divider"></div>
+                  </div>
+
+
+                </div>
                 <a href="">
                   <img src="http://theieltscoach.com/wp-content/uploads/2015/03/IELTS-Speaking-Tips-Icon-2.png" /> Pubmed
                   

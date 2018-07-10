@@ -65,7 +65,7 @@ class ThirdcolContent extends Component {
             </div>
             <div className="section-content">
               <h4>
-                Seguindo
+                Chat
               </h4>
 
 
