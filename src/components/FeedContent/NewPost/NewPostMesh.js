@@ -11,8 +11,6 @@ class NewPost extends Component {
           <div className="newpost">
             <div className="postcontent">
               {this.props.entry_front}
-              <br></br>
-              {this.props.aq}
             </div>
           </div>
 

@@ -40,7 +40,7 @@ class RecentContainer extends Component {
                              <li className="lista" key={indice}>
 
                                <NewPostHeaderMesh mh={item.mh} da={item.da} ms={item.ms}  ></NewPostHeaderMesh>
-                               <NewPostMesh entry_front={item.entry_front} aq={item.aq}></NewPostMesh>
+                               <NewPostMesh entry_front={item.entry_front} ></NewPostMesh>
 
 
 
